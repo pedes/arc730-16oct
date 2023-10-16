@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "resource": {
+      "type": "string",
+      "description": "The type of resource (e.g., 'order')."
+    },
+    "id": {
+      "type": "string",
+      "description": "The unique identifier of the order."
+    },
+    "profileId": {
+      "type": "string",
+      "description": "The profile identifier associated with the order."
+    },
+    "method": {
+      "type": "string",
+      "description": "The payment method used for the order."
+    },
+    "amount": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The order's total value."
+        },
+        "currency": {
+          "type": "string",
+          "description": "The currency in which the value is specified."
+        }
+      },
+      "description": "Information about the order's amount."
+    },
+    "status": {
+      "type": "string",
+      "description": "The status of the order (e.g., 'created')."
+    },
+    "isCancelable": {
+      "type": "boolean",
+      "description": "Indicates whether the order is cancelable."
+    },
+    "metadata": {
+      "type": "null",
+      "description": "Metadata associated with the order."
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "The date and time when the order was created."
+    },
+    "expiresAt": {
+      "type": "string",
+      "description": "The date and time when the order expires."
+    },
+    "mode": {
+      "type": "string",
+      "description": "The mode of the order (e.g., 'live')."
+    },
+    "locale": {
+      "type": "string",
+      "description": "The locale of the order (e.g., 'nl_NL')."
+    },
+    "billingAddress": {
+      "type": "object",
+      "properties": {
+        "organizationName": {
+          "type": "string",
+          "description": "The organization name for billing."
+        },
+        "streetAndNumber": {
+          "type": "string",
+          "description": "The street and number for billing."
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "The postal code for billing."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city for billing."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country for billing."
+        },
+        "givenName": {
+          "type": "string",
+          "description": "The given name of the billing contact."
+        },
+        "familyName": {
+          "type": "string",
+          "description": "The family name of the billing contact."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the billing contact."
+        }
+      },
+      "description": "Billing address information."
+    },
+    "shopperCountryMustMatchBillingCountry": {
+      "type": "boolean",
+      "description": "Indicates whether the shopper's country must match the billing country."
+    },
+    "consumerDateOfBirth": {
+      "type": "string",
+      "description": "The date of birth of the consumer (e.g., '1993-10-21')."
+    },
+    "orderNumber": {
+      "type": "string",
+      "description": "The order number or reference."
+    },
+    "shippingAddress": {
+      "type": "object",
+      "properties": {
+        "organizationName": {
+          "type": "string",
+          "description": "The organization name for shipping."
+        },
+        "streetAndNumber": {
+          "type": "string",
+          "description": "The street and number for shipping."
+        },
+        "postalCode": {
+          "type": "string",
+          "description": "The postal code for shipping."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city for shipping."
+        },
+        "country": {
+          "type": "string",
+          "description": "The country for shipping."
+        },
+        "givenName": {
+          "type": "string",
+          "description": "The given name of the shipping contact."
+        },
+        "familyName": {
+          "type": "string",
+          "description": "The family name of the shipping contact."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the shipping contact."
+        }
+      },
+      "description": "Shipping address information."
+    }
+  },
+  "required": [
+    "resource",
+    "id",
+    "profileId",
+    "method",
+    "amount",
+    "status",
+    "isCancelable",
+    "createdAt",
+    "expiresAt",
+    "mode",
+    "locale",
+    "billingAddress",
+    "shopperCountryMustMatchBillingCountry",
+    "consumerDateOfBirth",
+    "orderNumber",
+    "shippingAddress"
+  ]
+}
